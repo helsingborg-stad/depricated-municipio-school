@@ -9,6 +9,12 @@ class Enqueue
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'style'));
         add_action('wp_enqueue_scripts', array($this, 'script'));
+        add_action('admin_enqueue_scripts', array($this, 'adminStyle'));
+    }
+
+    public function adminStyle()
+    {
+        wp_enqueue_style('municipio-school', get_stylesheet_directory_uri() . '/assets/dist/css/admin.min.css', array(), '1.0.0');
     }
 
     /**

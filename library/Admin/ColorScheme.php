@@ -20,7 +20,7 @@ class ColorScheme
         foreach ($colors as $color => $variables) {
             acf_add_local_field(array(
                 'key' => 'field_' . sha1('school-colorscheme-' . $color),
-                'label' => __('Schoo\'s primary color', 'municipio-school'),
+                'label' => __('School\'s primary color', 'municipio-school'),
                 'name' => 'school-primary-color',
                 'type' => 'radio',
                 'layout' => 'horizontal',
